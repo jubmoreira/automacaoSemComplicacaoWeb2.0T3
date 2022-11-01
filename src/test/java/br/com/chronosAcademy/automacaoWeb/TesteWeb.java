@@ -53,7 +53,7 @@ public class TesteWeb {
     }
 
     private void clickBotao() {
-        String xpathBotao = "//section[2]/div[3]//a";
+        String xpathBotao = "//section[2]/div[3]//gita";
         WebElement btnTitulo = driver.findElement(By.xpath(xpathBotao));
         btnTitulo.click();
     }
