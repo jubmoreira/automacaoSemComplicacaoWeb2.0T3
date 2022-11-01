@@ -30,23 +30,32 @@ public class TesteWeb {
     @Test
     public void primeiroTeste(){
         //section[2]/div[3]/div/div/div/div/div[1]/div/h4 -poderia ser usada sem problemas
-        String xpathTitulo = "//section[2]//h4";
-
-        WebElement txtTitulo = driver.findElement(By.xpath(xpathTitulo));
-        String titulo = txtTitulo.getText();
+        String titulo = getTitulo   ();
         assertEquals("Porque Tempo É Conhecimento", titulo);
 
     }
 
+    private String getTitulo() {
+        String xpathTitulo = "//section[2]//h4";
+
+        WebElement txtTitulo = driver.findElement(By.xpath(xpathTitulo));
+        String titulo = txtTitulo.getText();
+        return titulo;
+    }
+
     @Test
     public void segundoTeste(){
+        clickBotao();
+
+        String xpathTitulo = "div.text-center > div.large-h1";
+        WebElement h2Titulo = driver.findElement(By.xpath(xpathTitulo));
+        assertEquals("Conheça todos os nossos cursos",h2Titulo.getText() );
+    }
+
+    private void clickBotao() {
         String xpathBotao = "//section[2]/div[3]//a";
         WebElement btnTitulo = driver.findElement(By.xpath(xpathBotao));
         btnTitulo.click();
-
-        String xpathTitulo = "//section/div/div/div/div[2]/div/div[3]//h3";
-        WebElement h2Titulo = driver.findElement(By.xpath(xpathTitulo));
-        assertEquals("Automação Sem Complicação Web 2.0",h2Titulo.getText() );
     }
 
 }
