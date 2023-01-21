@@ -36,6 +36,7 @@ public class Driver {
         driver.manage().window().maximize();
     }
 
+
     public WebDriver getDriver() {
         return driver;
     }
