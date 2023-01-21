@@ -4,12 +4,13 @@ Funcionalidade: Login
   Contexto:
     Dado que a modal esteja sendo exibida
 
-  Cenario: Fechar a modal no icone de fechar
-    Quando for realizado um clique no icone de fechar a modal
-    Entao a janela modal sera fechada
-
+  @fecharModal
   Cenario: Fechar a modal ao clicar fora da mesma
     Quando for realizado um clique fora da modal
+    Entao a janela modal sera fechada
+
+  Cenario: Fechar a modal no icone de fechar
+    Quando for realizado um clique no icone de fechar a modal
     Entao a janela modal sera fechada
 
   Cenario: Clicar no Link Create New Account
