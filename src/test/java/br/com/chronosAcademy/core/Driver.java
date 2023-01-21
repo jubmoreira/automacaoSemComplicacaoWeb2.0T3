@@ -1,5 +1,6 @@
 package br.com.chronosAcademy.core;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,10 +45,10 @@ public class Driver {
 
     }
     public static void visibilityOf(WebElement element){
-        wait.util(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
     public static void invisibilityOf(WebElement element){
-        wait.util(ExpectedConditions.invisibilityOf(element));
+        wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
     public static WebDriver getDriver() {

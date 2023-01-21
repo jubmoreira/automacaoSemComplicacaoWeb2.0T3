@@ -38,9 +38,14 @@ public class LoginSteps {
     }
 
     @Entao("a janela modal sera fechada")
-    public void aJanelaModalSeraFechada() {
-        throw new io.cucumber.java.PendingException();
+    public void aJanelaModalSeraFechada() throws Exception {
+        try {
+            loginPage.invisibiityOfBtnFechar();
+        }catch (Exception e){
+            throw new Exception("A janela modal não foi fechada");
+        }
     }
+
     @Quando("for realizado um clique no icone de fechar a modal")
     public void forRealizadoUmCliqueNoIconeDeFecharAModal() {
         loginPage.clickBtnFechar();
